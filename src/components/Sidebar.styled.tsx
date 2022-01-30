@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { mixin, color } from '../shared/styles';
 
 export const Sidebar = styled.div`
   position: fixed;
@@ -31,3 +32,32 @@ export const ProjectCategory = styled.p`
   color: #5E6C84;
   font-size: 13px;
 `
+
+export const LinkItem = styled.div<{
+  as?: string;
+  to?: string;
+  target?: string;
+}>`
+  position: relative;
+  display: flex;
+  padding: 8px 12px;
+  border-radius: 3px;
+  ${mixin.clickable}
+  &:hover { background: ${color.backgroundLight};
+  i {
+    margin-right: 15px;
+    font-size: 20px;
+  }
+  &.active {
+    color: ${color.primary};
+    background: ${color.backgroundLight};
+    i {
+      color: ${color.primary};
+    }
+  }
+`;
+
+export const LinkText = styled.div`
+  padding-top: 2px;
+  font-size: 14.7px;
+`;
