@@ -1,15 +1,22 @@
 import styled from 'styled-components'
-import { mixin, color, font } from '../shared/styles';
+import { mixin, color, font } from '../../shared/styles';
 
 export const Sidebar = styled.div`
   position: fixed;
   top: 0;
+  left: 64px;
   height: 100vh;
   width: 230px;
   padding: 0 16px 24px;
-  background: #F4F5F7;
+  background: #f4f5f7;
   border-right: 1px solid #dfe1e6;
-`
+  @media (max-width: 1100px) {
+    width: ${230 - 10}px;
+  }
+  @media (max-width: 999px) {
+    display: none;
+  }
+`;
 
 export const ProjectInfo = styled.div`
   display: flex;
