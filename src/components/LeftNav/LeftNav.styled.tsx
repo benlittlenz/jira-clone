@@ -52,3 +52,10 @@ export const ItemText = styled.div`
     opacity: 1;
   }
 `;
+
+export const Bottom = styled.div`
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+`

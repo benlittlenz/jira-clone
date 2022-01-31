@@ -1,5 +1,5 @@
 import { Icon } from "../Icon/Index"
-import { LeftNav, Item, ItemText } from "./LeftNav.styled";
+import { LeftNav, Item, ItemText, Bottom } from "./LeftNav.styled";
 
 export const ProjectLeftNav = () => {
   return (
@@ -13,6 +13,13 @@ export const ProjectLeftNav = () => {
         <Icon type="plus" size={27} />
         <ItemText>Create Issue</ItemText>
       </Item>
+
+      <Bottom>
+        <Item>
+          <Icon type="help" size={25} top={1} />
+          <ItemText>About</ItemText>
+        </Item>
+      </Bottom>
     </LeftNav>
   );
 }
