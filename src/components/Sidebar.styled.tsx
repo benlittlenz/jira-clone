@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { mixin, color } from '../shared/styles';
+import { mixin, color, font } from '../shared/styles';
 
 export const Sidebar = styled.div`
   position: fixed;
@@ -17,15 +17,14 @@ export const ProjectInfo = styled.div`
 `;
 
 export const ProjectTexts = styled.div`
-  // padding: 3px 0 0 10px;
-`
+  padding: 3px 0 0 10px;
+`;
 
-export const ProjectName = styled.h4`
-  color: #42526E;
-  font-size: 15px;
-  font-weight: 500;
-  padding: 0;
-`
+export const ProjectName = styled.div`
+  color: ${color.textDark};
+  ${font.size(15)};
+  ${font.medium};
+`;
 
 
 export const ProjectCategory = styled.p`
@@ -38,15 +37,14 @@ export const LinkItem = styled.div<{
   to?: string;
   target?: string;
 }>`
-  position: relative;
   display: flex;
+  align-items: center;
   padding: 8px 12px;
   border-radius: 3px;
   ${mixin.clickable}
-  &:hover { background: ${color.backgroundLight};
+  &:hover { background: ${color.backgroundLight}; }
   i {
     margin-right: 15px;
-    font-size: 20px;
   }
   &.active {
     color: ${color.primary};

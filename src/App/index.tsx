@@ -4,6 +4,8 @@ import NormalizeStyles from './NormalizeStyles';
 import BaseStyles from './BaseStyles';
 import { ProjectSidebar } from '../components/Sidebar';
 
+import './fontStyles.css';
+
 const App = () => (
   <Fragment>
     <NormalizeStyles />
