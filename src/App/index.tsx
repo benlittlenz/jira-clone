@@ -2,17 +2,15 @@ import React, { Fragment } from 'react';
 
 import NormalizeStyles from './NormalizeStyles';
 import BaseStyles from './BaseStyles';
-import { ProjectSidebar } from '../components/Sidebar/Sidebar';
-
 import './fontStyles.css';
-import { ProjectLeftNav } from '../components/LeftNav';
+import Routes from './Routes';
+
 
 const App = () => (
   <Fragment>
     <NormalizeStyles />
     <BaseStyles />
-    <ProjectLeftNav />
-    <ProjectSidebar />
+    <Routes />
   </Fragment>
 );
 
