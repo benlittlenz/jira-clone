@@ -18,7 +18,7 @@ const ErrorMessage = styled.p`
   color: red;
 `
 
-export const Wrapper = ({children, error}: FieldWrapperProps) => {
+export const FieldWrapper = ({children, error}: FieldWrapperProps) => {
   return (
     <StyledWrapper>
       {children}

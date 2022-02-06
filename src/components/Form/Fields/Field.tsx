@@ -1,8 +1,9 @@
 import React from "react";
 
 import { useUniqueId } from "../../../hooks/useUniqueId";
-import { Input } from "../../Input";
+import { Input } from "./Input/Input";
 import { FieldContext } from "./context";
+import { Label } from "./Label/Label";
 import { FieldComposition } from "./types";
 
 export const Field: React.FC & FieldComposition = ({ children }) => {
@@ -15,4 +16,5 @@ export const Field: React.FC & FieldComposition = ({ children }) => {
   )
 }
 
+Field.Label = Label;
 Field.Input = Input;

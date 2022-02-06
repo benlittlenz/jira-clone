@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 
 import { FieldContext } from "../context";
+import { FieldWrapper } from "../Wrapper";
 
 import { StyledInput, InputElement, StyledIcon } from "./Input.styled";
 import { InputProps } from "./types";
@@ -10,16 +11,18 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
     const id = useContext(FieldContext);
 
     return (
-      <StyledInput>
-        {icon && <StyledIcon type={icon} size={15} /> }
-        <InputElement
-          ref={ref}
-          id={id}
-          hasIcon={!!icon}
-          {...props}
-          {...registration}
-        />
-      </StyledInput>
+      <FieldWrapper error={error}>
+        <StyledInput>
+          {icon && <StyledIcon type={icon} size={15} />}
+          <InputElement
+            ref={ref}
+            id={id}
+            hasIcon={!!icon}
+            {...props}
+            {...registration}
+          />
+        </StyledInput>
+      </FieldWrapper>
     );
   }
 );
