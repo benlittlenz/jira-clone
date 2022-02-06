@@ -18,6 +18,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
             ref={ref}
             id={id}
             hasIcon={!!icon}
+            error={error}
             {...props}
             {...registration}
           />

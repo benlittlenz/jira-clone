@@ -11,8 +11,8 @@ type SettingsFormProps = {
 };
 
 const schema = z.object({
-  name: z.string().min(1, "Name must be at least 1 character long"),
-  url: z.string().min(1, "URL must be at least 1 character long"),
+  name: z.string().min(3, "Name must be at least 3 character long"),
+  url: z.string().min(6, "URL must be at least 6 character long"),
   description: z.string().optional(),
   category: z.string().optional(),
 });
