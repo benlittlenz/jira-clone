@@ -5,6 +5,7 @@ import { Input } from "./Input/Input";
 import { FieldContext } from "./context";
 import { Label } from "./Label/Label";
 import { FieldComposition } from "./types";
+import { Select } from "./Select";
 
 export const Field: React.FC & FieldComposition = ({ children }) => {
   const id = useUniqueId();
@@ -18,3 +19,4 @@ export const Field: React.FC & FieldComposition = ({ children }) => {
 
 Field.Label = Label;
 Field.Input = Input;
+Field.Select = Select;

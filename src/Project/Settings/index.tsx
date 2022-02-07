@@ -18,6 +18,11 @@ const schema = z.object({
 });
 
 export const Settings = () => {
+  const settingsDropdownOptions = [
+    { value: "Software", label: "Software" },
+    { value: "Marketing", label: "Marketing" },
+    { value: "Business", label: "Business" },
+  ];
   return (
     <div>
       <Form<SettingsFormProps, typeof schema>
@@ -53,11 +58,7 @@ export const Settings = () => {
             </Field>
             <Field>
               <Field.Label>Category</Field.Label>
-              <Field.Input
-                placeholder="Category"
-                error={formState.errors["category"]}
-                registration={register("category")}
-              />
+              <Field.Select options={settingsDropdownOptions} />
             </Field>
           </>
         )}
