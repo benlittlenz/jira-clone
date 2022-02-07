@@ -61,4 +61,7 @@ export const Option = styled.div`
   &:last-of-type {
     margin-bottom: 8px;
   }
+  &.select-option-is-active {
+    background: ${color.backgroundLightPrimary};
+  }
 `;
