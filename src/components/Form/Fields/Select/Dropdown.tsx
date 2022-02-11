@@ -1,5 +1,4 @@
 import React, { useLayoutEffect, useRef } from "react";
-import { FieldWrapper } from "../Wrapper";
 import { Dropdown, DropdownInput, Options, Option } from "./Dropdown.styled";
 import { DropdownProps } from "./types";
 

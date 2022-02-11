@@ -1,9 +1,9 @@
 import React from "react";
 
 import { useUniqueId } from "../../../hooks/useUniqueId";
-import { Input } from "./Input/Input";
+import { Input } from "./Input";
 import { FieldContext } from "./context";
-import { Label } from "./Label/Label";
+import { Label } from "./Label";
 import { FieldComposition } from "./types";
 import { Select } from "./Select";
 
