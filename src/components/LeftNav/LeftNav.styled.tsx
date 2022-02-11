@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import { font, mixin } from "../../shared/styles";
 
 export const LeftNav = styled.aside`
@@ -58,4 +59,4 @@ export const Bottom = styled.div`
   bottom: 20px;
   left: 0;
   width: 100%;
-`
+`;

@@ -26,7 +26,9 @@ export const Form = <
   const methods = useForm<TFormValues>({
     resolver: schema && zodResolver(schema),
   });
-  return <form id={id} onSubmit={methods.handleSubmit(onSubmit)}>
-    {children(methods)}
-  </form>;
+  return (
+    <form id={id} onSubmit={methods.handleSubmit(onSubmit)}>
+      {children(methods)}
+    </form>
+  );
 };

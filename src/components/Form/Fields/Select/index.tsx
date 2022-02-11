@@ -1,6 +1,8 @@
-import React, { useRef, useState} from "react";
+import React, { useRef, useState } from "react";
+
 import { useOnClickOutside } from "../../../../hooks/useOnClickOutside";
 import { FieldWrapper } from "../Wrapper";
+
 import { SelectDropdown } from "./Dropdown";
 import { StyledSelect, ValueContainer } from "./Dropdown.styled";
 import { SelectProps } from "./types";
@@ -12,9 +14,9 @@ export const Select: React.FC<SelectProps> = ({ options }) => {
 
   const deactiveDropdown = () => {
     setIsDropdownOpen(false);
-    if(selectRef && selectRef.current) {
+    if (selectRef && selectRef.current) {
       selectRef?.current?.focus();
-   }
+    }
   };
 
   const activateDropdown = () => {
@@ -25,7 +27,9 @@ export const Select: React.FC<SelectProps> = ({ options }) => {
   return (
     <FieldWrapper>
       <StyledSelect ref={selectRef}>
-        <ValueContainer data-testid='select' onClick={activateDropdown}>{isDropdownOpen && <SelectDropdown options={options}/>}</ValueContainer>
+        <ValueContainer data-testid="select" onClick={activateDropdown}>
+          {isDropdownOpen && <SelectDropdown options={options} />}
+        </ValueContainer>
       </StyledSelect>
     </FieldWrapper>
   );

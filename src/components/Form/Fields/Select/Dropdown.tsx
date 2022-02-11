@@ -1,4 +1,5 @@
 import React, { useLayoutEffect, useRef } from "react";
+
 import { Dropdown, DropdownInput, Options, Option } from "./Dropdown.styled";
 import { DropdownProps } from "./types";
 
@@ -15,9 +16,9 @@ export const SelectDropdown = ({ options }: DropdownProps) => {
       if (firstOption) {
         firstOption.classList.add(activeOptionClass);
       }
-    }
+    };
     setFirstOptionActive();
-  })
+  });
 
   const handleInputKeyboardChange = (event: React.KeyboardEvent) => {
     const { key } = event;
@@ -26,9 +27,9 @@ export const SelectDropdown = ({ options }: DropdownProps) => {
     const nextOption = activeOption?.nextElementSibling as HTMLElement;
     const previousOption = activeOption?.previousElementSibling as HTMLElement;
 
-    if(!activeOption) return;
+    if (!activeOption) return;
     if (key === "ArrowDown") {
-      if(nextOption) {
+      if (nextOption) {
         nextOption.focus();
         activeOption.classList.remove(activeOptionClass);
         nextOption.classList.add(activeOptionClass);
@@ -37,7 +38,7 @@ export const SelectDropdown = ({ options }: DropdownProps) => {
         options?.firstElementChild?.classList.add(activeOptionClass);
       }
     } else if (key === "ArrowUp") {
-      if(previousOption) {
+      if (previousOption) {
         activeOption.classList.remove(activeOptionClass);
         previousOption.classList.add(activeOptionClass);
         previousOption.focus();
@@ -45,18 +46,17 @@ export const SelectDropdown = ({ options }: DropdownProps) => {
         activeOption.classList.remove(activeOptionClass);
         options?.lastElementChild?.classList.add(activeOptionClass);
       }
-
     } else if (key === "Enter" && activeOption) {
       activeOption.click();
     }
-  }
+  };
 
   const handleKeyChange = (event: React.KeyboardEvent) => {
     const { key } = event;
-    if(key === 'ArrowDown' || key === 'ArrowUp') {
+    if (key === "ArrowDown" || key === "ArrowUp") {
       handleInputKeyboardChange(event);
     }
-  }
+  };
 
   const getActiveOptionNode = () =>
     optionsRef.current?.querySelector(`.${activeOptionClass}`) as HTMLElement;
@@ -65,7 +65,6 @@ export const SelectDropdown = ({ options }: DropdownProps) => {
       <DropdownInput
         type="text"
         placeholder="Search"
-        autoFocus
         onKeyDown={handleKeyChange}
       />
       <Options ref={optionsRef}>

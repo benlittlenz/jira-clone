@@ -14,12 +14,7 @@ export const Project = () => {
       <ProjectLeftNav />
       <ProjectSidebar />
 
-      <Route
-        path={`${match.path}/settings`}
-        render={() => (
-          <Settings />
-        )}
-      />
+      <Route path={`${match.path}/settings`} render={() => <Settings />} />
     </ProjectPage>
   );
 };

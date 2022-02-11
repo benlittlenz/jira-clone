@@ -1,4 +1,5 @@
-import { Icon } from "../Icon/Index"
+import { Icon } from "../Icon/Index";
+
 import { LeftNav, Item, ItemText, Bottom } from "./LeftNav.styled";
 
 export const ProjectLeftNav = () => {
@@ -22,4 +23,4 @@ export const ProjectLeftNav = () => {
       </Bottom>
     </LeftNav>
   );
-}
+};

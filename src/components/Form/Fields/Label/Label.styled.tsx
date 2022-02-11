@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 import { color, font } from "../../../../shared/styles";
 
 export const StyledLabel = styled.label`

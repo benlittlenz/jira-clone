@@ -1,5 +1,6 @@
-import styled from 'styled-components'
-import { mixin, color, font } from '../../shared/styles';
+import styled from "styled-components";
+
+import { mixin, color, font } from "../../shared/styles";
 
 export const Sidebar = styled.div`
   position: fixed;
@@ -33,11 +34,10 @@ export const ProjectName = styled.div`
   ${font.medium};
 `;
 
-
 export const ProjectCategory = styled.p`
-  color: #5E6C84;
+  color: #5e6c84;
   font-size: 13px;
-`
+`;
 
 export const LinkItem = styled.div<{
   as?: string;
@@ -49,7 +49,9 @@ export const LinkItem = styled.div<{
   padding: 8px 12px;
   border-radius: 3px;
   ${mixin.clickable}
-  &:hover { background: ${color.backgroundLight}; }
+  &:hover {
+    background: ${color.backgroundLight};
+  }
   i {
     margin-right: 15px;
   }

@@ -1,5 +1,6 @@
 import { FieldError } from "react-hook-form";
 import styled, { css } from "styled-components";
+
 import { color, font } from "../../../../shared/styles";
 import { Icon } from "../../../Icon/Index";
 
@@ -10,7 +11,10 @@ export const StyledInput = styled.div`
   width: 100%;
 `;
 
-export const InputElement = styled.input<{ hasIcon: boolean, error?: FieldError | undefined  }>`
+export const InputElement = styled.input<{
+  hasIcon: boolean;
+  error?: FieldError | undefined;
+}>`
   height: 100%;
   width: 100%;
   padding: 0 7px;

@@ -1,10 +1,9 @@
-import React, { Fragment } from 'react';
+import React, { Fragment } from "react";
 
-import NormalizeStyles from './NormalizeStyles';
-import BaseStyles from './BaseStyles';
-import './fontStyles.css';
-import Routes from './Routes';
-
+import BaseStyles from "./BaseStyles";
+import NormalizeStyles from "./NormalizeStyles";
+import "./fontStyles.css";
+import Routes from "./Routes";
 
 const App = () => (
   <Fragment>
